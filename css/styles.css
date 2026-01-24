@@ -1,0 +1,221 @@
+/* ========================================
+   Gloria Rossi Realty - Main Stylesheet
+   ======================================== */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #1a365d; /* Deep navy */
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #1a365d;
+    text-decoration: none;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #fff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a365d;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #b8860b; /* Gold accent */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)),
+                url('../images/hero-bg.jpg') center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 8rem 5%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #b8860b; /* Gold */
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #996515;
+    color: #fff;
+}
+
+/* Introduction Section */
+.intro {
+    text-align: center;
+    padding: 5rem 10%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Featured Properties */
+.featured {
+    padding: 5rem 5%;
+    background-color: #f8fafc;
+}
+
+.featured h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.property-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.property-image {
+    height: 200px;
+    background-color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+}
+
+.property-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.25rem;
+}
+
+.property-card p {
+    padding: 0 1.5rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.property-card .price {
+    color: #1a365d;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Call to Action */
+.cta {
+    text-align: center;
+    padding: 5rem 5%;
+    background-color: #1a365d;
+    color: #fff;
+}
+
+.cta h2 {
+    color: #fff;
+}
+
+.cta p {
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem 5%;
+    background-color: #0f172a;
+    color: #94a3b8;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
