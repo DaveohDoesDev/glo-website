@@ -19,7 +19,7 @@ body {
 /* Typography */
 h1, h2, h3 {
     font-family: Georgia, 'Times New Roman', serif;
-    color: #1a365d; /* Deep navy */
+    color: #2d2d2d; /* Charcoal */
     margin-bottom: 1rem;
 }
 
@@ -36,7 +36,7 @@ p {
 }
 
 a {
-    color: #1a365d;
+    color: #2d2d2d;
     text-decoration: none;
 }
 
@@ -46,15 +46,15 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5%;
-    background-color: #fff;
-    border-bottom: 1px solid #e2e8f0;
+    background-color: #2d2d2d;
+    border-bottom: none;
 }
 
 .logo {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #1a365d;
+    color: #fff;
 }
 
 .nav-links {
@@ -65,6 +65,7 @@ nav {
 
 .nav-links a {
     font-size: 1rem;
+    color: #fff;
     transition: color 0.3s ease;
 }
 
@@ -74,8 +75,8 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)),
-                url('../images/hero-bg.jpg') center/cover;
+    background: linear-gradient(rgba(45, 45, 45, 0.3), rgba(45, 45, 45, 0.4)),
+                url('../pictures/index_photo.webp') center/cover;
     color: #fff;
     text-align: center;
     padding: 8rem 5%;
@@ -126,7 +127,7 @@ nav {
 /* Featured Properties */
 .featured {
     padding: 5rem 5%;
-    background-color: #f8fafc;
+    background-color: #faf8f5;
 }
 
 .featured h2 {
@@ -144,17 +145,17 @@ nav {
 
 .property-card {
     background: #fff;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #e8e4df;
     overflow: hidden;
 }
 
 .property-image {
     height: 200px;
-    background-color: #cbd5e1;
+    background-color: #d4d0cb;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #64748b;
+    color: #6b6560;
 }
 
 .property-card h3 {
@@ -164,12 +165,12 @@ nav {
 
 .property-card p {
     padding: 0 1.5rem;
-    color: #64748b;
+    color: #6b6560;
     margin-bottom: 0.5rem;
 }
 
 .property-card .price {
-    color: #1a365d;
+    color: #2d2d2d;
     font-weight: bold;
     font-size: 1.25rem;
     padding-bottom: 1.5rem;
@@ -179,7 +180,7 @@ nav {
 .cta {
     text-align: center;
     padding: 5rem 5%;
-    background-color: #1a365d;
+    background-color: #2d2d2d;
     color: #fff;
 }
 
@@ -221,7 +222,7 @@ nav {
 
 /* About Page - Credentials */
 .about-credentials {
-    background-color: #f8fafc;
+    background-color: #faf8f5;
     padding: 5rem 5%;
     text-align: center;
 }
@@ -274,7 +275,7 @@ nav {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: #1a365d;
+    color: #2d2d2d;
 }
 
 .form-group input,
@@ -284,8 +285,8 @@ nav {
     padding: 0.75rem 1rem;
     font-size: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid #e2e8f0;
-    background-color: #f8fafc;
+    border: 1px solid #e8e4df;
+    background-color: #faf8f5;
     color: #333;
     transition: border-color 0.3s ease;
 }
@@ -299,7 +300,7 @@ nav {
 
 .contact-info {
     padding: 2rem;
-    background-color: #f8fafc;
+    background-color: #faf8f5;
     height: fit-content;
 }
 
@@ -316,8 +317,8 @@ nav {
 footer {
     text-align: center;
     padding: 3rem 5%;
-    background-color: #0f172a;
-    color: #94a3b8;
+    background-color: #1a1a1a;
+    color: #a09890;
 }
 
 footer p {
