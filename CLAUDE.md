@@ -16,7 +16,10 @@ Luxury real estate website for Gloria Rossi, a realtor in Viera, Florida. This i
 
 ```
 index.html          # Home page
+about.html          # About Gloria - bio, credentials, philosophy
+contact.html        # Contact form (Formspree) + contact info
 css/styles.css      # All styling (navy #1a365d + gold #b8860b color scheme)
+pictures/           # Images (Gloria's headshot)
 docs/planning/      # Planning documentation
 ```
 
@@ -32,10 +35,15 @@ Milestone 1 complete:
 - [x] CSS styling with responsive design
 - [x] Deployed to Vercel
 
-Next up (Milestone 2):
-- [ ] About page
-- [ ] Contact page with form
+Milestone 2 in progress:
+- [x] About page with bio, credentials, philosophy
+- [x] Contact page with Formspree form (ID: mzdgvval)
 - [ ] Real property images
+
+Next up (Milestone 3):
+- [ ] Property listing page
+- [ ] Individual property page template
+- [ ] Photo gallery
 
 ## Context
 
