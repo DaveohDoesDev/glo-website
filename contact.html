@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Gloria Rossi | Luxury Real Estate in Viera, Florida</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Gloria Rossi</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="hero hero-small">
+        <h1>Get in Touch</h1>
+        <p>I'd love to help you find your dream home in Viera</p>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <!-- Contact Form -->
+        <form class="contact-form" action="https://formspree.io/f/mzdgvval" method="POST">
+            <h2>Send a Message</h2>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+            </div>
+
+            <div class="form-group">
+                <label for="interest">I'm Interested In</label>
+                <select id="interest" name="interest">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="buying">Buying a Home</option>
+                    <option value="selling">Selling a Home</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell me about what you're looking for..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <!-- Contact Info Sidebar -->
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+
+            <div class="contact-info-item">
+                <h3>Phone</h3>
+                <p>(321) 555-0100</p>
+            </div>
+
+            <div class="contact-info-item">
+                <h3>Email</h3>
+                <p>gloria@gloriarossirealty.com</p>
+            </div>
+
+            <div class="contact-info-item">
+                <h3>Office</h3>
+                <p>Viera, Florida 32955</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Gloria Rossi | Luxury Real Estate</p>
+        <p>Viera, Florida</p>
+        <p>&copy; 2026 All rights reserved.</p>
+    </footer>
+</body>
+</html>
