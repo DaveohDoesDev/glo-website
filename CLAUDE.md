@@ -9,7 +9,7 @@ Luxury real estate website for Gloria Rossi, a realtor in Viera, Florida. This i
 ## Tech Stack
 
 - **HTML/CSS/JavaScript** - Chosen to learn fundamentals before frameworks
-- **Hosting**: Vercel (deployed from main branch)
+- **Hosting**: GitHub Pages (deployed from main branch)
 - No build tools or frameworks - static HTML site
 
 ## Project Structure
@@ -18,7 +18,7 @@ Luxury real estate website for Gloria Rossi, a realtor in Viera, Florida. This i
 index.html          # Home page
 about.html          # About Gloria - bio, credentials, philosophy
 contact.html        # Contact form (Formspree) + contact info
-css/styles.css      # All styling (navy #1a365d + gold #b8860b color scheme)
+css/styles.css      # All styling (charcoal #2d2d2d + gold #b8860b color scheme)
 pictures/           # Images (Gloria's headshot)
 docs/planning/      # Planning documentation
 ```
@@ -26,14 +26,14 @@ docs/planning/      # Planning documentation
 ## Development
 
 - Open `index.html` in browser to preview locally
-- Push to `main` branch to auto-deploy to Vercel
+- Push to `main` branch to auto-deploy to GitHub Pages
 
 ## Current Progress
 
 Milestone 1 complete:
 - [x] Home page with hero, intro, featured properties, CTA, footer
 - [x] CSS styling with responsive design
-- [x] Deployed to Vercel
+- [x] Deployed to GitHub Pages
 
 Milestone 2 in progress:
 - [x] About page with bio, credentials, philosophy

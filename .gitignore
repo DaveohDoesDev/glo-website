@@ -1,0 +1,10 @@
+# Claude Code settings
+.claude/
+
+# macOS / Windows / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+*.swp
+*.swo
