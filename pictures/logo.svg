@@ -1,0 +1,52 @@
+<!-- Gloria Rossi Realty — Full Brand Wordmark (transparent bg, dark text + gold) -->
+<!-- Use on white/light backgrounds. For dark backgrounds, use logo-reversed.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" fill="none">
+
+  <!-- ===== MARK ===== -->
+
+  <!-- Left thin rule -->
+  <line x1="20" y1="60" x2="128" y2="60" stroke="#c5a028" stroke-width="0.75"/>
+
+  <!-- Orbital arc above GR (Space Coast launch trajectory) -->
+  <path d="M 140 80 Q 180 20 220 34" stroke="#c5a028" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <!-- Dot at end of arc -->
+  <circle cx="220" cy="34" r="3.2" fill="#c5a028"/>
+
+  <!-- Right thin rule -->
+  <line x1="232" y1="60" x2="340" y2="60" stroke="#c5a028" stroke-width="0.75"/>
+
+  <!-- GR Monogram -->
+  <text x="180" y="100"
+    font-family="Georgia, 'Times New Roman', Times, serif"
+    font-size="52"
+    font-weight="normal"
+    fill="#0d1b2a"
+    text-anchor="middle"
+    letter-spacing="8">GR</text>
+
+  <!-- ===== WORDMARK ===== -->
+
+  <!-- Separator rule -->
+  <line x1="60" y1="118" x2="300" y2="118" stroke="#c5a028" stroke-width="0.6"/>
+
+  <!-- GLORIA ROSSI -->
+  <text x="180" y="144"
+    font-family="'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="17"
+    font-weight="normal"
+    fill="#0d1b2a"
+    text-anchor="middle"
+    letter-spacing="11">GLORIA ROSSI</text>
+
+  <!-- Fine rule under name -->
+  <line x1="110" y1="156" x2="250" y2="156" stroke="#c5a028" stroke-width="0.4"/>
+
+  <!-- Sub-tagline -->
+  <text x="180" y="174"
+    font-family="'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="8"
+    fill="#8a7d72"
+    text-anchor="middle"
+    letter-spacing="4">LUXURY REAL ESTATE · SPACE COAST, FLORIDA</text>
+
+</svg>

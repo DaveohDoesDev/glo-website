@@ -1,0 +1,7 @@
+<!-- Gloria Rossi Realty — Orbital Arc Mark (transparent bg, for inline nav/web use) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none">
+  <!-- Orbital arc: launch trajectory -->
+  <path d="M 5 38 Q 18 5 40 12" stroke="#c5a028" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Dot at trajectory end -->
+  <circle cx="40" cy="12" r="3" fill="#c5a028"/>
+</svg>

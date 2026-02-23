@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Navy background -->
+  <rect width="100" height="100" fill="#0d1b2a" rx="6"/>
+
+  <!-- Orbital arc: launch trajectory from lower-left to upper-right -->
+  <path d="M 18 72 Q 42 18 82 26" stroke="#c5a028" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Small dot at the end of the arc (the object in orbit) -->
+  <circle cx="82" cy="26" r="4" fill="#c5a028"/>
+
+  <!-- GR Monogram -->
+  <text x="50" y="90"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="26"
+    fill="rgba(255,255,255,0.88)"
+    text-anchor="middle"
+    letter-spacing="4">GR</text>
+</svg>
