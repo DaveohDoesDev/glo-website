@@ -3,92 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Gloria Rossi | Luxury Real Estate in Viera, Florida</title>
+    <title>Contact Gloria Rossi | Luxury Real Estate · Florida's Space Coast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
     <!-- Navigation -->
-    <nav>
-        <div class="logo">Gloria Rossi</div>
+    <nav id="navbar" class="scrolled">
+        <div class="logo">
+            <span class="logo-name">Gloria Rossi</span>
+            <span class="logo-tagline">Luxury Real Estate</span>
+        </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="properties.html">Properties</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Page Hero -->
-    <header class="hero hero-small">
-        <h1>Get in Touch</h1>
-        <p>I'd love to help you find your dream home in Viera</p>
+    <header class="page-hero">
+        <div class="page-hero-content">
+            <span class="eyebrow">Begin Your Search</span>
+            <h1>Let's Talk</h1>
+            <p>Your Space Coast story starts with a conversation</p>
+        </div>
     </header>
 
     <!-- Contact Section -->
     <section class="contact-section">
-        <!-- Contact Form -->
-        <form class="contact-form" action="https://formspree.io/f/mzdgvval" method="POST">
-            <h2>Send a Message</h2>
+        <div class="contact-section-inner">
 
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/mzdgvval" method="POST">
+                <h2 class="contact-form-title">Send a Message</h2>
+                <p class="contact-form-sub">Tell me about what you're looking for and I'll be in touch within 24 hours.</p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(321) 000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">I'm Looking To</label>
+                        <select id="interest" name="interest">
+                            <option value="" disabled selected>Select one</option>
+                            <option value="buying">Buy a Property</option>
+                            <option value="selling">Sell a Property</option>
+                            <option value="both">Buy &amp; Sell</option>
+                            <option value="general">Ask a Question</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Approximate Budget</label>
+                    <select id="budget" name="budget">
+                        <option value="" disabled selected>Select a range</option>
+                        <option value="500-750k">$500K &ndash; $750K</option>
+                        <option value="750k-1m">$750K &ndash; $1M</option>
+                        <option value="1m-2m">$1M &ndash; $2M</option>
+                        <option value="2m+">$2M+</option>
+                        <option value="flexible">Flexible / Unsure</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell me about your ideal home, neighborhood preferences, timeline, or anything else on your mind..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+
+            <!-- Contact Info Sidebar -->
+            <div class="contact-info-card">
+                <h3>Gloria Rossi</h3>
+                <p>Luxury Real Estate Specialist &nbsp;&middot;&nbsp; Brevard County, Florida</p>
+
+                <div class="info-item">
+                    <span class="info-label">Phone</span>
+                    <p class="info-value">(321) 555-0100</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Email</span>
+                    <p class="info-value">gloria@gloriarossirealty.com</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Office</span>
+                    <p class="info-value">Viera, Florida 32955</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Availability</span>
+                    <p class="info-value">By Appointment &nbsp;&middot;&nbsp; 7 Days a Week</p>
+                </div>
+
+                <hr class="contact-divider">
+
+                <span class="info-label">Serving</span>
+                <p class="serving-list">
+                    Viera &nbsp;&middot;&nbsp; Suntree &nbsp;&middot;&nbsp; Merritt Island<br>
+                    Melbourne &nbsp;&middot;&nbsp; Melbourne Beach<br>
+                    Indialantic &nbsp;&middot;&nbsp; Rockledge<br>
+                    Cocoa Beach &nbsp;&middot;&nbsp; All of Brevard County
+                </p>
             </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
-            </div>
-
-            <div class="form-group">
-                <label for="interest">I'm Interested In</label>
-                <select id="interest" name="interest">
-                    <option value="" disabled selected>Select an option</option>
-                    <option value="buying">Buying a Home</option>
-                    <option value="selling">Selling a Home</option>
-                    <option value="general">General Inquiry</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Tell me about what you're looking for..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-
-        <!-- Contact Info Sidebar -->
-        <div class="contact-info">
-            <h2>Contact Info</h2>
-
-            <div class="contact-info-item">
-                <h3>Phone</h3>
-                <p>(321) 555-0100</p>
-            </div>
-
-            <div class="contact-info-item">
-                <h3>Email</h3>
-                <p>gloria@gloriarossirealty.com</p>
-            </div>
-
-            <div class="contact-info-item">
-                <h3>Office</h3>
-                <p>Viera, Florida 32955</p>
-            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Gloria Rossi | Luxury Real Estate</p>
-        <p>Viera, Florida</p>
-        <p>&copy; 2026 All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-name">Gloria Rossi</span>
+                <span class="logo-tagline">Luxury Real Estate</span>
+                <p>Boutique luxury real estate on Florida's Space Coast. Serving Viera, Suntree, Melbourne, and all of Brevard County with unparalleled local expertise and personal care.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="about.html">About Gloria</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Communities</h4>
+                <ul>
+                    <li><a href="#">Viera</a></li>
+                    <li><a href="#">Suntree</a></li>
+                    <li><a href="#">Merritt Island</a></li>
+                    <li><a href="#">Melbourne Beach</a></li>
+                    <li><a href="#">Rockledge</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="footer-contact-item">
+                    <span class="contact-label">Phone</span>
+                    <p>(321) 555-0100</p>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="contact-label">Email</span>
+                    <p>gloria@gloriarossirealty.com</p>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="contact-label">Office</span>
+                    <p>Viera, Florida 32955</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gloria Rossi Luxury Real Estate &nbsp;&middot;&nbsp; Viera, Florida &nbsp;&middot;&nbsp; All Rights Reserved</p>
+        </div>
     </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
 </body>
 </html>
