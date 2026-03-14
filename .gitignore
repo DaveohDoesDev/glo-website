@@ -1,3 +1,8 @@
+# Credentials and secrets
+.env
+.env.*
+*.pem
+
 # Claude Code settings
 .claude/
 
