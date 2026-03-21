@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details | Gloria Rossi Luxury Real Estate</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="scrolled">
+        <div class="logo">
+            <span class="logo-name">Gloria Rossi</span>
+            <span class="logo-tagline">Luxury Real Estate</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Loading State -->
+    <div id="property-loading" class="property-loading">
+        <p>Loading property details...</p>
+    </div>
+
+    <!-- Not Found State -->
+    <div id="property-not-found" class="property-not-found" style="display:none;">
+        <div class="not-found-inner">
+            <span class="eyebrow">Property Not Found</span>
+            <h2>This listing may no longer be available</h2>
+            <p>The property you're looking for may have been sold or removed from our listings.</p>
+            <a href="properties.html" class="btn btn-primary">Browse All Properties</a>
+        </div>
+    </div>
+
+    <!-- Property Content (hidden until loaded) -->
+    <div id="property-content" style="display:none;">
+
+        <!-- Property Hero -->
+        <header class="property-hero" id="property-hero">
+            <div class="property-hero-overlay">
+                <div class="property-hero-content">
+                    <a href="properties.html" class="back-link">&larr; All Properties</a>
+                    <h1 id="prop-address"></h1>
+                    <p id="prop-city-state"></p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Key Stats Bar -->
+        <section class="property-stats-bar">
+            <div class="stats-bar-inner">
+                <div class="stat-item stat-price">
+                    <span class="stat-value" id="prop-price"></span>
+                    <span class="stat-label">List Price</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="prop-beds"></span>
+                    <span class="stat-label">Bedrooms</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="prop-baths"></span>
+                    <span class="stat-label">Bathrooms</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="prop-sqft"></span>
+                    <span class="stat-label">Sq Ft</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="prop-year"></span>
+                    <span class="stat-label">Year Built</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="property-gallery" id="property-gallery" style="display:none;">
+            <div class="gallery-inner">
+                <div class="gallery-main">
+                    <img id="gallery-main-img" src="" alt="Property photo">
+                    <button class="gallery-nav gallery-prev" id="gallery-prev">&lsaquo;</button>
+                    <button class="gallery-nav gallery-next" id="gallery-next">&rsaquo;</button>
+                    <span class="gallery-counter" id="gallery-counter"></span>
+                </div>
+                <div class="gallery-thumbs" id="gallery-thumbs"></div>
+            </div>
+        </section>
+
+        <!-- Description & Details -->
+        <section class="property-main">
+            <div class="property-main-inner">
+                <div class="property-description">
+                    <span class="eyebrow">About This Property</span>
+                    <h2>Property Description</h2>
+                    <p id="prop-description"></p>
+
+                    <!-- Virtual Tour -->
+                    <div id="prop-virtual-tour" style="display:none;">
+                        <span class="eyebrow" style="margin-top:2.5rem;">Experience It</span>
+                        <h3>Virtual Tour</h3>
+                        <a id="prop-tour-link" href="#" target="_blank" rel="noopener" class="btn btn-dark">Take the Virtual Tour &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="property-details-card">
+                    <h3>Property Details</h3>
+                    <dl class="details-list" id="prop-details-list">
+                    </dl>
+
+                    <!-- Contact CTA -->
+                    <div class="detail-cta">
+                        <p>Interested in this property?</p>
+                        <a href="contact.html" class="btn btn-primary" id="prop-contact-btn">Contact Gloria</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section class="property-map" id="property-map-section" style="display:none;">
+            <div class="map-inner">
+                <span class="eyebrow">Location</span>
+                <h2>Neighborhood</h2>
+                <div class="map-container" id="map-container"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+        <span class="eyebrow">Ready to See This Home?</span>
+        <h2>Schedule a Private Showing</h2>
+        <p>Gloria offers personalized tours at your convenience. Let's find your perfect home.</p>
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-name">Gloria Rossi</span>
+                <span class="logo-tagline">Luxury Real Estate</span>
+                <p>Boutique luxury real estate on Florida's Space Coast. Serving Viera, Suntree, Melbourne, and all of Brevard County with unmatched local expertise and genuine personal care.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="about.html">About Gloria</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Communities</h4>
+                <ul>
+                    <li><a href="#">Viera</a></li>
+                    <li><a href="#">Suntree</a></li>
+                    <li><a href="#">Merritt Island</a></li>
+                    <li><a href="#">Melbourne Beach</a></li>
+                    <li><a href="#">Rockledge</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="footer-contact-item">
+                    <span class="contact-label">Phone</span>
+                    <p>(321) 480-1697</p>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="contact-label">Email</span>
+                    <p>gloriarossirealestate@gmail.com</p>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="contact-label">Office</span>
+                    <p>Viera, Florida 32955</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gloria Rossi Luxury Real Estate &middot; Viera, Florida &middot; All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll
+        var navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 60) { navbar.classList.add('scrolled'); }
+            else { navbar.classList.remove('scrolled'); }
+        });
+
+        function formatPrice(price) {
+            return '$' + price.toLocaleString();
+        }
+
+        function formatBaths(baths, halfBaths) {
+            if (halfBaths > 0) return baths + '.5';
+            return String(baths);
+        }
+
+        // Gallery state
+        var galleryPhotos = [];
+        var galleryIndex = 0;
+
+        function showGalleryPhoto(index) {
+            if (galleryPhotos.length === 0) return;
+            galleryIndex = index;
+            var mainImg = document.getElementById('gallery-main-img');
+            mainImg.src = galleryPhotos[index].url || '';
+            mainImg.alt = galleryPhotos[index].caption || 'Property photo';
+            document.getElementById('gallery-counter').textContent = (index + 1) + ' / ' + galleryPhotos.length;
+
+            // Update thumb highlights
+            var thumbs = document.querySelectorAll('.gallery-thumb');
+            thumbs.forEach(function(t, i) {
+                t.classList.toggle('active', i === index);
+            });
+        }
+
+        function addDetailRow(dl, label, value) {
+            if (!value && value !== 0) return;
+            var dt = document.createElement('dt');
+            dt.textContent = label;
+            var dd = document.createElement('dd');
+            dd.textContent = value;
+            dl.appendChild(dt);
+            dl.appendChild(dd);
+        }
+
+        // Get listing ID from URL
+        var params = new URLSearchParams(window.location.search);
+        var listingId = params.get('id');
+
+        if (!listingId) {
+            document.getElementById('property-loading').style.display = 'none';
+            document.getElementById('property-not-found').style.display = 'block';
+        } else {
+            fetch('data/listings.json')
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    var listings = data.listings || [];
+                    var listing = listings.find(function(l) { return l.id === listingId; });
+
+                    document.getElementById('property-loading').style.display = 'none';
+
+                    if (!listing) {
+                        document.getElementById('property-not-found').style.display = 'block';
+                        return;
+                    }
+
+                    // Update page title
+                    document.title = listing.address.full + ' | Gloria Rossi Luxury Real Estate';
+
+                    // Show content
+                    document.getElementById('property-content').style.display = 'block';
+
+                    // Hero
+                    var heroEl = document.getElementById('property-hero');
+                    if (listing.photos && listing.photos.length > 0 && listing.photos[0].url) {
+                        heroEl.style.backgroundImage =
+                            'linear-gradient(to bottom, rgba(13,27,42,0.5) 0%, rgba(13,27,42,0.75) 100%), url(\'' + listing.photos[0].url + '\')';
+                        heroEl.style.backgroundSize = 'cover';
+                        heroEl.style.backgroundPosition = 'center';
+                    }
+                    document.getElementById('prop-address').textContent = listing.address.full;
+                    document.getElementById('prop-city-state').textContent =
+                        listing.address.city + ', ' + listing.address.state + ' ' + listing.address.zip;
+
+                    // Stats bar
+                    document.getElementById('prop-price').textContent = formatPrice(listing.price);
+                    document.getElementById('prop-beds').textContent = listing.details.beds;
+                    document.getElementById('prop-baths').textContent = formatBaths(listing.details.baths, listing.details.halfBaths);
+                    document.getElementById('prop-sqft').textContent = listing.details.sqft.toLocaleString();
+                    document.getElementById('prop-year').textContent = listing.details.yearBuilt || '—';
+
+                    // Photo gallery
+                    galleryPhotos = (listing.photos || []).filter(function(p) { return p.url; });
+                    if (galleryPhotos.length > 0) {
+                        document.getElementById('property-gallery').style.display = 'block';
+                        showGalleryPhoto(0);
+
+                        // Build thumbs
+                        var thumbsContainer = document.getElementById('gallery-thumbs');
+                        galleryPhotos.forEach(function(photo, i) {
+                            var thumb = document.createElement('button');
+                            thumb.className = 'gallery-thumb' + (i === 0 ? ' active' : '');
+                            thumb.style.backgroundImage = 'url(\'' + (photo.thumbUrl || photo.url) + '\')';
+                            thumb.title = photo.caption || 'Photo ' + (i + 1);
+                            thumb.addEventListener('click', function() { showGalleryPhoto(i); });
+                            thumbsContainer.appendChild(thumb);
+                        });
+
+                        // Nav buttons
+                        document.getElementById('gallery-prev').addEventListener('click', function() {
+                            showGalleryPhoto((galleryIndex - 1 + galleryPhotos.length) % galleryPhotos.length);
+                        });
+                        document.getElementById('gallery-next').addEventListener('click', function() {
+                            showGalleryPhoto((galleryIndex + 1) % galleryPhotos.length);
+                        });
+                    }
+
+                    // Description
+                    document.getElementById('prop-description').textContent = listing.description;
+
+                    // Virtual tour
+                    if (listing.virtualTours && listing.virtualTours.length > 0) {
+                        document.getElementById('prop-virtual-tour').style.display = 'block';
+                        document.getElementById('prop-tour-link').href = listing.virtualTours[0].url;
+                    }
+
+                    // Details card
+                    var dl = document.getElementById('prop-details-list');
+                    addDetailRow(dl, 'Property Type', listing.details.propertySubType || listing.details.propertyType);
+                    addDetailRow(dl, 'Bedrooms', listing.details.beds);
+                    addDetailRow(dl, 'Bathrooms', formatBaths(listing.details.baths, listing.details.halfBaths));
+                    addDetailRow(dl, 'Square Feet', listing.details.sqft.toLocaleString());
+                    addDetailRow(dl, 'Lot Size', listing.details.lotSize ? listing.details.lotSize + ' acres' : null);
+                    addDetailRow(dl, 'Year Built', listing.details.yearBuilt);
+                    addDetailRow(dl, 'Garage', listing.details.garage ? listing.details.garage + ' car' : null);
+                    addDetailRow(dl, 'Pool', listing.details.pool ? 'Yes' : 'No');
+                    addDetailRow(dl, 'Waterfront', listing.details.waterfront ? 'Yes' : 'No');
+                    addDetailRow(dl, 'City', listing.address.city);
+                    addDetailRow(dl, 'County', listing.address.county);
+                    addDetailRow(dl, 'MLS #', listing.mlsId);
+                    addDetailRow(dl, 'Listed', listing.listDate);
+
+                    // Map
+                    if (listing.location && listing.location.lat && listing.location.lng) {
+                        document.getElementById('property-map-section').style.display = 'block';
+                        var mapContainer = document.getElementById('map-container');
+                        var iframe = document.createElement('iframe');
+                        iframe.width = '100%';
+                        iframe.height = '400';
+                        iframe.style.border = '0';
+                        iframe.loading = 'lazy';
+                        iframe.referrerPolicy = 'no-referrer-when-downgrade';
+                        iframe.src = 'https://www.openstreetmap.org/export/embed.html?bbox=' +
+                            (listing.location.lng - 0.01) + ',' +
+                            (listing.location.lat - 0.008) + ',' +
+                            (listing.location.lng + 0.01) + ',' +
+                            (listing.location.lat + 0.008) +
+                            '&layer=mapnik&marker=' +
+                            listing.location.lat + ',' + listing.location.lng;
+                        mapContainer.appendChild(iframe);
+                    }
+
+                    // Contact button
+                    document.getElementById('prop-contact-btn').href =
+                        'contact.html?property=' + encodeURIComponent(listing.address.full);
+                })
+                .catch(function(err) {
+                    console.error('Failed to load listing:', err);
+                    document.getElementById('property-loading').innerHTML =
+                        '<p>Unable to load property details. Please try again later.</p>';
+                });
+        }
+    </script>
+
+</body>
+</html>

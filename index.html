@@ -68,50 +68,10 @@
             <h2>Featured Properties</h2>
             <p>A handpicked collection of exceptional homes currently available across the Space Coast</p>
         </div>
-        <div class="property-grid">
-            <div class="property-card">
-                <div class="property-image">
-                    <span class="property-badge">Featured</span>
-                    <span class="property-location">Viera West</span>
-                </div>
-                <div class="property-body">
-                    <h3>Lakefront Estate at Viera</h3>
-                    <p class="property-details">4 Bed &nbsp;&middot;&nbsp; 3 Bath &nbsp;&middot;&nbsp; 3,200 sq ft</p>
-                    <div class="property-price">
-                        $850,000
-                        <a href="contact.html">Inquire &rarr;</a>
-                    </div>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="property-image">
-                    <span class="property-badge">New Listing</span>
-                    <span class="property-location">Suntree</span>
-                </div>
-                <div class="property-body">
-                    <h3>Golf Course Manor</h3>
-                    <p class="property-details">5 Bed &nbsp;&middot;&nbsp; 4 Bath &nbsp;&middot;&nbsp; 4,100 sq ft</p>
-                    <div class="property-price">
-                        $1,200,000
-                        <a href="contact.html">Inquire &rarr;</a>
-                    </div>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="property-image">
-                    <span class="property-badge">Exclusive</span>
-                    <span class="property-location">Brevard County</span>
-                </div>
-                <div class="property-body">
-                    <h3>Private Retreat Estate</h3>
-                    <p class="property-details">4 Bed &nbsp;&middot;&nbsp; 3.5 Bath &nbsp;&middot;&nbsp; 3,800 sq ft</p>
-                    <div class="property-price">
-                        $975,000
-                        <a href="contact.html">Inquire &rarr;</a>
-                    </div>
-                </div>
-            </div>
+        <div class="property-grid" id="featured-grid">
+            <!-- Populated dynamically from data/featured.json -->
         </div>
+        <div id="featured-loading" class="featured-loading">Loading featured properties...</div>
     </section>
 
     <!-- Space Coast Knowledge Section -->
@@ -250,15 +210,69 @@
     </footer>
 
     <script>
-        const navbar = document.getElementById('navbar');
+        var navbar = document.getElementById('navbar');
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 60) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            if (window.scrollY > 60) { navbar.classList.add('scrolled'); }
+            else { navbar.classList.remove('scrolled'); }
         });
         if (window.scrollY > 60) { navbar.classList.add('scrolled'); }
+
+        // Load featured properties
+        function formatPrice(price) {
+            if (price >= 1000000) {
+                var m = price / 1000000;
+                return '$' + (m % 1 === 0 ? m.toFixed(0) : m.toFixed(2).replace(/0$/, '')) + 'M';
+            }
+            return '$' + price.toLocaleString();
+        }
+
+        function formatBaths(baths, halfBaths) {
+            if (halfBaths > 0) return baths + '.5';
+            return String(baths);
+        }
+
+        fetch('data/featured.json')
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                var grid = document.getElementById('featured-grid');
+                var loading = document.getElementById('featured-loading');
+                loading.style.display = 'none';
+
+                var listings = (data.listings || []).slice(0, 3);
+                listings.forEach(function(listing) {
+                    var hasPhoto = listing.photos && listing.photos.length > 0 && listing.photos[0].url;
+                    var imageStyle = hasPhoto
+                        ? ' style="background: linear-gradient(135deg, rgba(13,27,42,0.18) 0%, rgba(13,27,42,0.35) 100%), url(\'' + listing.photos[0].url + '\') center / cover no-repeat;"'
+                        : '';
+                    var badge = 'Featured';
+                    if (listing.details.waterfront) badge = 'Waterfront';
+
+                    var card = document.createElement('a');
+                    card.href = 'property.html?id=' + encodeURIComponent(listing.id);
+                    card.className = 'property-card property-card-link';
+                    card.innerHTML =
+                        '<div class="property-image"' + imageStyle + '>' +
+                            '<span class="property-badge">' + badge + '</span>' +
+                            '<span class="property-location">' + listing.address.city + '</span>' +
+                        '</div>' +
+                        '<div class="property-body">' +
+                            '<h3>' + listing.address.full + '</h3>' +
+                            '<p class="property-details">' +
+                                listing.details.beds + ' Bed &middot; ' +
+                                formatBaths(listing.details.baths, listing.details.halfBaths) + ' Bath &middot; ' +
+                                listing.details.sqft.toLocaleString() + ' sq ft' +
+                            '</p>' +
+                            '<div class="property-price">' +
+                                formatPrice(listing.price) +
+                                '<span class="property-view-link">View Details &rarr;</span>' +
+                            '</div>' +
+                        '</div>';
+                    grid.appendChild(card);
+                });
+            })
+            .catch(function() {
+                document.getElementById('featured-loading').textContent = '';
+            });
     </script>
 
 </body>

@@ -2,6 +2,7 @@
 .env
 .env.*
 *.pem
+spark-token.txt
 
 # Claude Code settings
 .claude/

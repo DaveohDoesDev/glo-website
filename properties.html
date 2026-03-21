@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties | Gloria Rossi Luxury Real Estate</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">
+            <span class="logo-name">Gloria Rossi</span>
+            <span class="logo-tagline">Luxury Real Estate</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="page-hero-content">
+            <span class="eyebrow">Space Coast &middot; Brevard County</span>
+            <h1>Properties</h1>
+            <p>Browse active listings across Florida's Space Coast</p>
+        </div>
+    </header>
+
+    <!-- Filters -->
+    <section class="listing-filters">
+        <div class="filters-inner">
+            <div class="filter-group">
+                <label for="filter-city">City</label>
+                <select id="filter-city">
+                    <option value="">All Cities</option>
+                    <option value="Viera">Viera</option>
+                    <option value="Suntree">Suntree</option>
+                    <option value="Melbourne">Melbourne</option>
+                    <option value="Melbourne Beach">Melbourne Beach</option>
+                    <option value="Merritt Island">Merritt Island</option>
+                    <option value="Indialantic">Indialantic</option>
+                    <option value="Satellite Beach">Satellite Beach</option>
+                    <option value="Rockledge">Rockledge</option>
+                    <option value="Palm Bay">Palm Bay</option>
+                    <option value="Cocoa Beach">Cocoa Beach</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-price-min">Min Price</label>
+                <select id="filter-price-min">
+                    <option value="">No Min</option>
+                    <option value="300000">$300k</option>
+                    <option value="400000">$400k</option>
+                    <option value="500000">$500k</option>
+                    <option value="750000">$750k</option>
+                    <option value="1000000">$1M</option>
+                    <option value="1500000">$1.5M</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-price-max">Max Price</label>
+                <select id="filter-price-max">
+                    <option value="">No Max</option>
+                    <option value="500000">$500k</option>
+                    <option value="750000">$750k</option>
+                    <option value="1000000">$1M</option>
+                    <option value="1500000">$1.5M</option>
+                    <option value="2000000">$2M</option>
+                    <option value="5000000">$5M+</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-beds">Beds</label>
+                <select id="filter-beds">
+                    <option value="">Any</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
+                    <option value="5">5+</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-features">Features</label>
+                <select id="filter-features">
+                    <option value="">Any</option>
+                    <option value="pool">Pool</option>
+                    <option value="waterfront">Waterfront</option>
+                </select>
+            </div>
+            <button class="btn btn-primary filter-btn" id="filter-reset">Reset</button>
+        </div>
+    </section>
+
+    <!-- Results Info -->
+    <section class="listing-results-info">
+        <div class="results-info-inner">
+            <p id="results-count"></p>
+            <div class="sort-control">
+                <label for="sort-by">Sort by</label>
+                <select id="sort-by">
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="date-desc">Newest First</option>
+                    <option value="sqft-desc">Largest First</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listings Grid -->
+    <section class="listings-section">
+        <div id="listings-loading" class="listings-loading">
+            <p>Loading properties...</p>
+        </div>
+        <div id="listings-empty" class="listings-empty" style="display:none;">
+            <span class="eyebrow">No Results</span>
+            <h3>No properties match your filters</h3>
+            <p>Try adjusting your search criteria or <a href="#" id="empty-reset">reset all filters</a>.</p>
+        </div>
+        <div id="listings-grid" class="property-grid listings-grid"></div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <span class="eyebrow">Don't See What You're Looking For?</span>
+        <h2>Let Gloria Find Your Perfect Home</h2>
+        <p>With deep MLS access and local connections, Gloria can find properties before they hit the market.</p>
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-name">Gloria Rossi</span>
+                <span class="logo-tagline">Luxury Real Estate</span>
+                <p>Boutique luxury real estate on Florida's Space Coast. Serving Viera, Suntree, Melbourne, and all of Brevard County with unmatched local expertise and genuine personal care.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="about.html">About Gloria</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Communities</h4>
+                <ul>
+                    <li><a href="#">Viera</a></li>
+                    <li><a href="#">Suntree</a></li>
+                    <li><a href="#">Merritt Island</a></li>
+                    <li><a href="#">Melbourne Beach</a></li>
+                    <li><a href="#">Rockledge</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="footer-contact-item">
+                    <span class="contact-label">Phone</span>
+                    <p>(321) 480-1697</p>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="contact-label">Email</span>
+                    <p>gloriarossirealestate@gmail.com</p>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="contact-label">Office</span>
+                    <p>Viera, Florida 32955</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gloria Rossi Luxury Real Estate &middot; Viera, Florida &middot; All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 60) { navbar.classList.add('scrolled'); }
+            else { navbar.classList.remove('scrolled'); }
+        });
+        if (window.scrollY > 60) { navbar.classList.add('scrolled'); }
+
+        // State
+        let allListings = [];
+
+        // Format price
+        function formatPrice(price) {
+            if (price >= 1000000) {
+                const m = price / 1000000;
+                return '$' + (m % 1 === 0 ? m.toFixed(0) : m.toFixed(2).replace(/0$/, '')) + 'M';
+            }
+            return '$' + price.toLocaleString();
+        }
+
+        // Format bath count
+        function formatBaths(baths, halfBaths) {
+            if (halfBaths > 0) return baths + '.5';
+            return String(baths);
+        }
+
+        // Build a property card
+        function createPropertyCard(listing) {
+            var hasPhoto = listing.photos && listing.photos.length > 0 && listing.photos[0].url;
+            var imageStyle = hasPhoto
+                ? 'background: linear-gradient(135deg, rgba(13,27,42,0.18) 0%, rgba(13,27,42,0.35) 100%), url(\'' + listing.photos[0].url + '\') center / cover no-repeat;'
+                : '';
+            var badges = [];
+            if (listing.details.waterfront) badges.push('Waterfront');
+            if (listing.details.pool) badges.push('Pool');
+            if (listing.virtualTours && listing.virtualTours.length > 0) badges.push('Virtual Tour');
+
+            var badgeHTML = badges.length > 0
+                ? '<span class="property-badge">' + badges[0] + '</span>'
+                : '';
+
+            var card = document.createElement('a');
+            card.href = 'property.html?id=' + encodeURIComponent(listing.id);
+            card.className = 'property-card property-card-link';
+            card.innerHTML =
+                '<div class="property-image"' + (imageStyle ? ' style="' + imageStyle + '"' : '') + '>' +
+                    badgeHTML +
+                    '<span class="property-location">' + listing.address.city + '</span>' +
+                '</div>' +
+                '<div class="property-body">' +
+                    '<h3>' + listing.address.full + '</h3>' +
+                    '<p class="property-details">' +
+                        listing.details.beds + ' Bed &middot; ' +
+                        formatBaths(listing.details.baths, listing.details.halfBaths) + ' Bath &middot; ' +
+                        listing.details.sqft.toLocaleString() + ' sq ft' +
+                    '</p>' +
+                    '<div class="property-price">' +
+                        formatPrice(listing.price) +
+                        '<span class="property-view-link">View Details &rarr;</span>' +
+                    '</div>' +
+                '</div>';
+            return card;
+        }
+
+        // Get filter values
+        function getFilters() {
+            return {
+                city: document.getElementById('filter-city').value,
+                priceMin: Number(document.getElementById('filter-price-min').value) || 0,
+                priceMax: Number(document.getElementById('filter-price-max').value) || Infinity,
+                beds: Number(document.getElementById('filter-beds').value) || 0,
+                features: document.getElementById('filter-features').value
+            };
+        }
+
+        // Get sort value
+        function getSortFn() {
+            var sort = document.getElementById('sort-by').value;
+            switch (sort) {
+                case 'price-asc': return function(a, b) { return a.price - b.price; };
+                case 'date-desc': return function(a, b) { return (b.listDate || '').localeCompare(a.listDate || ''); };
+                case 'sqft-desc': return function(a, b) { return (b.details.sqft || 0) - (a.details.sqft || 0); };
+                default: return function(a, b) { return b.price - a.price; };
+            }
+        }
+
+        // Filter and render
+        function renderListings() {
+            var filters = getFilters();
+            var sortFn = getSortFn();
+
+            var filtered = allListings.filter(function(l) {
+                if (filters.city && l.address.city !== filters.city) return false;
+                if (l.price < filters.priceMin) return false;
+                if (l.price > filters.priceMax) return false;
+                if (l.details.beds < filters.beds) return false;
+                if (filters.features === 'pool' && !l.details.pool) return false;
+                if (filters.features === 'waterfront' && !l.details.waterfront) return false;
+                return true;
+            });
+
+            filtered.sort(sortFn);
+
+            var grid = document.getElementById('listings-grid');
+            var empty = document.getElementById('listings-empty');
+            var count = document.getElementById('results-count');
+
+            grid.innerHTML = '';
+            count.textContent = filtered.length + ' propert' + (filtered.length === 1 ? 'y' : 'ies') + ' found';
+
+            if (filtered.length === 0) {
+                empty.style.display = 'block';
+                grid.style.display = 'none';
+            } else {
+                empty.style.display = 'none';
+                grid.style.display = '';
+                filtered.forEach(function(listing) {
+                    grid.appendChild(createPropertyCard(listing));
+                });
+            }
+        }
+
+        // Reset filters
+        function resetFilters() {
+            document.getElementById('filter-city').value = '';
+            document.getElementById('filter-price-min').value = '';
+            document.getElementById('filter-price-max').value = '';
+            document.getElementById('filter-beds').value = '';
+            document.getElementById('filter-features').value = '';
+            renderListings();
+        }
+
+        // Event listeners
+        document.getElementById('filter-city').addEventListener('change', renderListings);
+        document.getElementById('filter-price-min').addEventListener('change', renderListings);
+        document.getElementById('filter-price-max').addEventListener('change', renderListings);
+        document.getElementById('filter-beds').addEventListener('change', renderListings);
+        document.getElementById('filter-features').addEventListener('change', renderListings);
+        document.getElementById('sort-by').addEventListener('change', renderListings);
+        document.getElementById('filter-reset').addEventListener('click', resetFilters);
+        document.getElementById('empty-reset').addEventListener('click', function(e) {
+            e.preventDefault();
+            resetFilters();
+        });
+
+        // Check for city filter in URL (e.g., properties.html?city=Viera)
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('city')) {
+            document.getElementById('filter-city').value = urlParams.get('city');
+        }
+
+        // Load data
+        fetch('data/listings.json')
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                allListings = data.listings || [];
+                document.getElementById('listings-loading').style.display = 'none';
+                renderListings();
+            })
+            .catch(function(err) {
+                console.error('Failed to load listings:', err);
+                document.getElementById('listings-loading').innerHTML =
+                    '<p>Unable to load properties. Please try again later.</p>';
+            });
+    </script>
+
+</body>
+</html>

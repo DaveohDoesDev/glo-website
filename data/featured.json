@@ -1,0 +1,236 @@
+{
+  "lastUpdated": "2026-03-21T00:00:00.000Z",
+  "count": 6,
+  "listings": [
+    {
+      "id": "DEMO-001",
+      "mlsId": "950001",
+      "status": "Active",
+      "price": 1450000,
+      "address": {
+        "full": "4521 Grand Preserve Way",
+        "city": "Viera",
+        "state": "FL",
+        "zip": "32955",
+        "county": "Brevard"
+      },
+      "details": {
+        "beds": 5,
+        "baths": 4,
+        "halfBaths": 1,
+        "sqft": 4800,
+        "lotSize": 0.45,
+        "yearBuilt": 2021,
+        "propertyType": "Residential",
+        "propertySubType": "Single Family Residence",
+        "garage": 3,
+        "pool": true,
+        "waterfront": true
+      },
+      "description": "Stunning lakefront estate in Viera's most prestigious enclave. This custom-built home features soaring ceilings, a gourmet kitchen with premium appliances, and a resort-style pool overlooking the lake. The expansive master suite offers dual walk-in closets and a spa-inspired bath. Smart home technology throughout.",
+      "photos": [
+        { "url": "", "thumbUrl": "", "caption": "Front exterior" },
+        { "url": "", "thumbUrl": "", "caption": "Living room" },
+        { "url": "", "thumbUrl": "", "caption": "Kitchen" },
+        { "url": "", "thumbUrl": "", "caption": "Pool and lake view" }
+      ],
+      "videos": [],
+      "virtualTours": [
+        { "url": "https://example.com/tour/demo-001", "caption": "3D Virtual Tour" }
+      ],
+      "location": { "lat": 28.2453, "lng": -80.7209 },
+      "listDate": "2026-03-01",
+      "modifiedDate": "2026-03-20T12:00:00Z",
+      "agent": { "name": "Gloria Rossi", "office": "Luxury Real Estate" }
+    },
+    {
+      "id": "DEMO-002",
+      "mlsId": "950002",
+      "status": "Active",
+      "price": 1200000,
+      "address": {
+        "full": "1089 Suntree Boulevard",
+        "city": "Suntree",
+        "state": "FL",
+        "zip": "32940",
+        "county": "Brevard"
+      },
+      "details": {
+        "beds": 5,
+        "baths": 4,
+        "halfBaths": 0,
+        "sqft": 4100,
+        "lotSize": 0.38,
+        "yearBuilt": 2018,
+        "propertyType": "Residential",
+        "propertySubType": "Single Family Residence",
+        "garage": 3,
+        "pool": true,
+        "waterfront": false
+      },
+      "description": "Golf course estate in Suntree's premier gated community. Open floor plan with walls of glass opening to a screened lanai and infinity-edge pool. Chef's kitchen, wine room, home theater, and a first-floor owner's suite. Panoramic views of the 14th fairway.",
+      "photos": [
+        { "url": "", "thumbUrl": "", "caption": "Front exterior" },
+        { "url": "", "thumbUrl": "", "caption": "Great room" },
+        { "url": "", "thumbUrl": "", "caption": "Pool area" }
+      ],
+      "videos": [],
+      "virtualTours": [],
+      "location": { "lat": 28.2200, "lng": -80.6700 },
+      "listDate": "2026-02-15",
+      "modifiedDate": "2026-03-18T10:00:00Z",
+      "agent": { "name": "Gloria Rossi", "office": "Luxury Real Estate" }
+    },
+    {
+      "id": "DEMO-003",
+      "mlsId": "950003",
+      "status": "Active",
+      "price": 975000,
+      "address": {
+        "full": "302 Riverside Drive",
+        "city": "Melbourne Beach",
+        "state": "FL",
+        "zip": "32951",
+        "county": "Brevard"
+      },
+      "details": {
+        "beds": 4,
+        "baths": 3,
+        "halfBaths": 1,
+        "sqft": 3200,
+        "lotSize": 0.28,
+        "yearBuilt": 2015,
+        "propertyType": "Residential",
+        "propertySubType": "Single Family Residence",
+        "garage": 2,
+        "pool": true,
+        "waterfront": true
+      },
+      "description": "Coastal elegance meets modern luxury in this riverfront retreat. Steps from the Atlantic with Indian River access. Open concept living with floor-to-ceiling windows capturing water views. Gourmet kitchen, spa master bath, private dock, and heated saltwater pool.",
+      "photos": [
+        { "url": "", "thumbUrl": "", "caption": "Aerial view" },
+        { "url": "", "thumbUrl": "", "caption": "Living room" },
+        { "url": "", "thumbUrl": "", "caption": "Water views" }
+      ],
+      "videos": [],
+      "virtualTours": [],
+      "location": { "lat": 28.0684, "lng": -80.5600 },
+      "listDate": "2026-03-10",
+      "modifiedDate": "2026-03-19T08:00:00Z",
+      "agent": { "name": "Gloria Rossi", "office": "Luxury Real Estate" }
+    },
+    {
+      "id": "DEMO-004",
+      "mlsId": "950004",
+      "status": "Active",
+      "price": 850000,
+      "address": {
+        "full": "7745 Preserve Point Circle",
+        "city": "Viera",
+        "state": "FL",
+        "zip": "32940",
+        "county": "Brevard"
+      },
+      "details": {
+        "beds": 4,
+        "baths": 3,
+        "halfBaths": 0,
+        "sqft": 3400,
+        "lotSize": 0.32,
+        "yearBuilt": 2020,
+        "propertyType": "Residential",
+        "propertySubType": "Single Family Residence",
+        "garage": 2,
+        "pool": true,
+        "waterfront": false
+      },
+      "description": "Pristine Viera home backing to a nature preserve with no rear neighbors. Bright open layout, quartz countertops, custom cabinetry, and designer finishes. Outdoor living space features a summer kitchen, heated pool, and serene preserve views.",
+      "photos": [
+        { "url": "", "thumbUrl": "", "caption": "Front exterior" },
+        { "url": "", "thumbUrl": "", "caption": "Kitchen" },
+        { "url": "", "thumbUrl": "", "caption": "Backyard preserve view" }
+      ],
+      "videos": [],
+      "virtualTours": [],
+      "location": { "lat": 28.2510, "lng": -80.7300 },
+      "listDate": "2026-02-28",
+      "modifiedDate": "2026-03-17T14:00:00Z",
+      "agent": { "name": "Gloria Rossi", "office": "Luxury Real Estate" }
+    },
+    {
+      "id": "DEMO-005",
+      "mlsId": "950005",
+      "status": "Active",
+      "price": 725000,
+      "address": {
+        "full": "215 Ocean Terrace",
+        "city": "Indialantic",
+        "state": "FL",
+        "zip": "32903",
+        "county": "Brevard"
+      },
+      "details": {
+        "beds": 3,
+        "baths": 3,
+        "halfBaths": 0,
+        "sqft": 2600,
+        "lotSize": 0.18,
+        "yearBuilt": 2019,
+        "propertyType": "Residential",
+        "propertySubType": "Single Family Residence",
+        "garage": 2,
+        "pool": false,
+        "waterfront": false
+      },
+      "description": "Modern beach living in the heart of Indialantic. Two blocks from the ocean, this beautifully updated home features an open floor plan, impact windows, a sleek kitchen with waterfall island, and a private courtyard perfect for entertaining.",
+      "photos": [
+        { "url": "", "thumbUrl": "", "caption": "Street view" },
+        { "url": "", "thumbUrl": "", "caption": "Open floor plan" }
+      ],
+      "videos": [],
+      "virtualTours": [],
+      "location": { "lat": 28.0893, "lng": -80.5650 },
+      "listDate": "2026-03-05",
+      "modifiedDate": "2026-03-20T09:00:00Z",
+      "agent": { "name": "Gloria Rossi", "office": "Luxury Real Estate" }
+    },
+    {
+      "id": "DEMO-006",
+      "mlsId": "950006",
+      "status": "Active",
+      "price": 695000,
+      "address": {
+        "full": "1530 Indian River Lane",
+        "city": "Rockledge",
+        "state": "FL",
+        "zip": "32955",
+        "county": "Brevard"
+      },
+      "details": {
+        "beds": 4,
+        "baths": 3,
+        "halfBaths": 0,
+        "sqft": 2900,
+        "lotSize": 0.52,
+        "yearBuilt": 2005,
+        "propertyType": "Residential",
+        "propertySubType": "Single Family Residence",
+        "garage": 2,
+        "pool": true,
+        "waterfront": true
+      },
+      "description": "Classic Rockledge riverfront on a half-acre lot with mature oaks and stunning Indian River views. Spacious layout with hardwood floors, fireplace, updated kitchen, and a screened lanai with heated pool. Private dock with boat lift included.",
+      "photos": [
+        { "url": "", "thumbUrl": "", "caption": "River view" },
+        { "url": "", "thumbUrl": "", "caption": "Living room" },
+        { "url": "", "thumbUrl": "", "caption": "Dock" }
+      ],
+      "videos": [],
+      "virtualTours": [],
+      "location": { "lat": 28.3200, "lng": -80.7250 },
+      "listDate": "2026-01-20",
+      "modifiedDate": "2026-03-15T11:00:00Z",
+      "agent": { "name": "Gloria Rossi", "office": "Luxury Real Estate" }
+    }
+  ]
+}
