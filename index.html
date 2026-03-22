@@ -18,12 +18,16 @@
             <span class="logo-name">Gloria Rossi</span>
             <span class="logo-tagline">Luxury Real Estate</span>
         </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="properties.html">Properties</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
+        <div class="nav-overlay"></div>
     </nav>
 
     <!-- Hero -->
@@ -41,7 +45,7 @@
     </header>
 
     <!-- Three Pillars -->
-    <section class="pillars">
+    <section class="pillars reveal">
         <div class="pillars-inner">
             <div class="pillar">
                 <span class="pillar-icon">◈</span>
@@ -62,7 +66,7 @@
     </section>
 
     <!-- Featured Properties -->
-    <section class="featured">
+    <section class="featured reveal">
         <div class="section-header">
             <span class="eyebrow">Curated Selection</span>
             <h2>Featured Properties</h2>
@@ -75,7 +79,7 @@
     </section>
 
     <!-- Space Coast Knowledge Section -->
-    <section class="space-coast">
+    <section class="space-coast reveal">
         <div class="space-coast-inner">
             <div class="space-coast-text">
                 <span class="eyebrow">A Rare Perspective</span>
@@ -114,7 +118,7 @@
     </section>
 
     <!-- About Preview -->
-    <section class="about-preview">
+    <section class="about-preview reveal">
         <div class="about-preview-inner">
             <div class="about-preview-image">
                 <img src="pictures/glo_headshot_enhanced.png" alt="Gloria Rossi, Luxury Real Estate Specialist" class="about-preview-photo">
@@ -145,7 +149,7 @@
     </section>
 
     <!-- Testimonial -->
-    <section class="testimonial-section">
+    <section class="testimonial-section reveal">
         <div class="testimonial-quote">
             <span class="testimonial-mark">&ldquo;</span>
             <p class="testimonial-text">Gloria didn't just find us a house &mdash; she found us a home. Her knowledge of Viera is unmatched, and her attention to every detail made what could have been a stressful process feel effortless.</p>
@@ -210,12 +214,49 @@
     </footer>
 
     <script>
+        // Navbar scroll
         var navbar = document.getElementById('navbar');
         window.addEventListener('scroll', function () {
             if (window.scrollY > 60) { navbar.classList.add('scrolled'); }
             else { navbar.classList.remove('scrolled'); }
         });
         if (window.scrollY > 60) { navbar.classList.add('scrolled'); }
+
+        // Mobile menu
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var links = document.querySelector('.nav-links');
+            var overlay = document.querySelector('.nav-overlay');
+            function closeMenu() {
+                toggle.classList.remove('active');
+                links.classList.remove('open');
+                overlay.classList.remove('visible');
+            }
+            toggle.addEventListener('click', function() {
+                var isOpen = links.classList.contains('open');
+                if (isOpen) { closeMenu(); } else {
+                    toggle.classList.add('active');
+                    links.classList.add('open');
+                    overlay.classList.add('visible');
+                }
+            });
+            overlay.addEventListener('click', closeMenu);
+            links.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+        })();
+
+        // Scroll reveal
+        (function() {
+            var reveals = document.querySelectorAll('.reveal');
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            reveals.forEach(function(el) { observer.observe(el); });
+        })();
 
         // Load featured properties
         function formatPrice(price) {

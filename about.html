@@ -18,12 +18,16 @@
             <span class="logo-name">Gloria Rossi</span>
             <span class="logo-tagline">Luxury Real Estate</span>
         </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="properties.html">Properties</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
+        <div class="nav-overlay"></div>
     </nav>
 
     <!-- Page Hero -->
@@ -36,7 +40,7 @@
     </header>
 
     <!-- Bio Section -->
-    <section class="about-bio">
+    <section class="about-bio reveal">
         <div class="about-bio-inner">
             <div class="about-bio-image-wrap">
                 <img src="pictures/glo_headshot_enhanced.png" alt="Gloria Rossi, Luxury Real Estate Specialist" class="about-bio-photo">
@@ -53,7 +57,7 @@
     </section>
 
     <!-- Credentials / Stats -->
-    <section class="credentials">
+    <section class="credentials reveal">
         <div class="credentials-inner">
             <div class="section-header">
                 <span class="eyebrow">By the Numbers</span>
@@ -85,7 +89,7 @@
     </section>
 
     <!-- Philosophy -->
-    <section class="philosophy">
+    <section class="philosophy reveal">
         <div class="philosophy-inner">
             <span class="eyebrow">My Approach</span>
             <h2>Real Estate Is Personal. I Treat It That Way.</h2>
@@ -173,6 +177,42 @@
                 navbar.classList.remove('scrolled');
             }
         });
+
+        // Mobile menu
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var links = document.querySelector('.nav-links');
+            var overlay = document.querySelector('.nav-overlay');
+            function closeMenu() {
+                toggle.classList.remove('active');
+                links.classList.remove('open');
+                overlay.classList.remove('visible');
+            }
+            toggle.addEventListener('click', function() {
+                var isOpen = links.classList.contains('open');
+                if (isOpen) { closeMenu(); } else {
+                    toggle.classList.add('active');
+                    links.classList.add('open');
+                    overlay.classList.add('visible');
+                }
+            });
+            overlay.addEventListener('click', closeMenu);
+            links.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+        })();
+
+        // Scroll reveal
+        (function() {
+            var reveals = document.querySelectorAll('.reveal');
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            reveals.forEach(function(el) { observer.observe(el); });
+        })();
     </script>
 
 </body>

@@ -18,12 +18,16 @@
             <span class="logo-name">Gloria Rossi</span>
             <span class="logo-tagline">Luxury Real Estate</span>
         </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="properties.html">Properties</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
+        <div class="nav-overlay"></div>
     </nav>
 
     <!-- Page Hero -->
@@ -86,6 +90,15 @@
                     <option value="3">3+</option>
                     <option value="4">4+</option>
                     <option value="5">5+</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-baths">Baths</label>
+                <select id="filter-baths">
+                    <option value="">Any</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
                 </select>
             </div>
             <div class="filter-group">
@@ -194,6 +207,28 @@
         });
         if (window.scrollY > 60) { navbar.classList.add('scrolled'); }
 
+        // Mobile menu
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var links = document.querySelector('.nav-links');
+            var overlay = document.querySelector('.nav-overlay');
+            function closeMenu() {
+                toggle.classList.remove('active');
+                links.classList.remove('open');
+                overlay.classList.remove('visible');
+            }
+            toggle.addEventListener('click', function() {
+                var isOpen = links.classList.contains('open');
+                if (isOpen) { closeMenu(); } else {
+                    toggle.classList.add('active');
+                    links.classList.add('open');
+                    overlay.classList.add('visible');
+                }
+            });
+            overlay.addEventListener('click', closeMenu);
+            links.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+        })();
+
         // State
         let allListings = [];
 
@@ -257,6 +292,7 @@
                 priceMin: Number(document.getElementById('filter-price-min').value) || 0,
                 priceMax: Number(document.getElementById('filter-price-max').value) || Infinity,
                 beds: Number(document.getElementById('filter-beds').value) || 0,
+                baths: Number(document.getElementById('filter-baths').value) || 0,
                 features: document.getElementById('filter-features').value
             };
         }
@@ -282,6 +318,7 @@
                 if (l.price < filters.priceMin) return false;
                 if (l.price > filters.priceMax) return false;
                 if (l.details.beds < filters.beds) return false;
+                if (l.details.baths < filters.baths) return false;
                 if (filters.features === 'pool' && !l.details.pool) return false;
                 if (filters.features === 'waterfront' && !l.details.waterfront) return false;
                 return true;
@@ -314,6 +351,7 @@
             document.getElementById('filter-price-min').value = '';
             document.getElementById('filter-price-max').value = '';
             document.getElementById('filter-beds').value = '';
+            document.getElementById('filter-baths').value = '';
             document.getElementById('filter-features').value = '';
             renderListings();
         }
@@ -323,6 +361,7 @@
         document.getElementById('filter-price-min').addEventListener('change', renderListings);
         document.getElementById('filter-price-max').addEventListener('change', renderListings);
         document.getElementById('filter-beds').addEventListener('change', renderListings);
+        document.getElementById('filter-baths').addEventListener('change', renderListings);
         document.getElementById('filter-features').addEventListener('change', renderListings);
         document.getElementById('sort-by').addEventListener('change', renderListings);
         document.getElementById('filter-reset').addEventListener('click', resetFilters);

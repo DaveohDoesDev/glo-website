@@ -18,12 +18,16 @@
             <span class="logo-name">Gloria Rossi</span>
             <span class="logo-tagline">Luxury Real Estate</span>
         </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="properties.html">Properties</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
+        <div class="nav-overlay"></div>
     </nav>
 
     <!-- Page Hero -->
@@ -185,6 +189,28 @@
                 navbar.classList.remove('scrolled');
             }
         });
+
+        // Mobile menu
+        (function() {
+            var toggle = document.querySelector('.nav-toggle');
+            var links = document.querySelector('.nav-links');
+            var overlay = document.querySelector('.nav-overlay');
+            function closeMenu() {
+                toggle.classList.remove('active');
+                links.classList.remove('open');
+                overlay.classList.remove('visible');
+            }
+            toggle.addEventListener('click', function() {
+                var isOpen = links.classList.contains('open');
+                if (isOpen) { closeMenu(); } else {
+                    toggle.classList.add('active');
+                    links.classList.add('open');
+                    overlay.classList.add('visible');
+                }
+            });
+            overlay.addEventListener('click', closeMenu);
+            links.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+        })();
     </script>
 
 </body>

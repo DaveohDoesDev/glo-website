@@ -29,10 +29,10 @@
       },
       "description": "Stunning lakefront estate in Viera's most prestigious enclave. This custom-built home features soaring ceilings, a gourmet kitchen with premium appliances, and a resort-style pool overlooking the lake. The expansive master suite offers dual walk-in closets and a spa-inspired bath. Smart home technology throughout.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Front exterior" },
-        { "url": "", "thumbUrl": "", "caption": "Living room" },
-        { "url": "", "thumbUrl": "", "caption": "Kitchen" },
-        { "url": "", "thumbUrl": "", "caption": "Pool and lake view" }
+        { "url": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop", "caption": "Front exterior" },
+        { "url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop", "caption": "Living room" },
+        { "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop", "caption": "Kitchen" },
+        { "url": "https://images.unsplash.com/photo-1572331165267-854da2b021b1?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1572331165267-854da2b021b1?w=400&h=300&fit=crop", "caption": "Pool and lake view" }
       ],
       "videos": [],
       "virtualTours": [
@@ -70,9 +70,9 @@
       },
       "description": "Golf course estate in Suntree's premier gated community. Open floor plan with walls of glass opening to a screened lanai and infinity-edge pool. Chef's kitchen, wine room, home theater, and a first-floor owner's suite. Panoramic views of the 14th fairway.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Front exterior" },
-        { "url": "", "thumbUrl": "", "caption": "Great room" },
-        { "url": "", "thumbUrl": "", "caption": "Pool area" }
+        { "url": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop", "caption": "Front exterior" },
+        { "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop", "caption": "Great room" },
+        { "url": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=300&fit=crop", "caption": "Pool area" }
       ],
       "videos": [],
       "virtualTours": [],
@@ -108,9 +108,9 @@
       },
       "description": "Coastal elegance meets modern luxury in this riverfront retreat. Steps from the Atlantic with Indian River access. Open concept living with floor-to-ceiling windows capturing water views. Gourmet kitchen, spa master bath, private dock, and heated saltwater pool.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Aerial view" },
-        { "url": "", "thumbUrl": "", "caption": "Living room" },
-        { "url": "", "thumbUrl": "", "caption": "Water views" }
+        { "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=300&fit=crop", "caption": "Aerial view" },
+        { "url": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=400&h=300&fit=crop", "caption": "Living room" },
+        { "url": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=400&h=300&fit=crop", "caption": "Water views" }
       ],
       "videos": [],
       "virtualTours": [],
@@ -146,9 +146,9 @@
       },
       "description": "Pristine Viera home backing to a nature preserve with no rear neighbors. Bright open layout, quartz countertops, custom cabinetry, and designer finishes. Outdoor living space features a summer kitchen, heated pool, and serene preserve views.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Front exterior" },
-        { "url": "", "thumbUrl": "", "caption": "Kitchen" },
-        { "url": "", "thumbUrl": "", "caption": "Backyard preserve view" }
+        { "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=400&h=300&fit=crop", "caption": "Front exterior" },
+        { "url": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400&h=300&fit=crop", "caption": "Kitchen" },
+        { "url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=300&fit=crop", "caption": "Backyard preserve view" }
       ],
       "videos": [],
       "virtualTours": [],
@@ -184,8 +184,8 @@
       },
       "description": "Modern beach living in the heart of Indialantic. Two blocks from the ocean, this beautifully updated home features an open floor plan, impact windows, a sleek kitchen with waterfall island, and a private courtyard perfect for entertaining.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Street view" },
-        { "url": "", "thumbUrl": "", "caption": "Open floor plan" }
+        { "url": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=400&h=300&fit=crop", "caption": "Street view" },
+        { "url": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&h=300&fit=crop", "caption": "Open floor plan" }
       ],
       "videos": [],
       "virtualTours": [],
@@ -221,9 +221,9 @@
       },
       "description": "Classic Rockledge riverfront on a half-acre lot with mature oaks and stunning Indian River views. Spacious layout with hardwood floors, fireplace, updated kitchen, and a screened lanai with heated pool. Private dock with boat lift included.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "River view" },
-        { "url": "", "thumbUrl": "", "caption": "Living room" },
-        { "url": "", "thumbUrl": "", "caption": "Dock" }
+        { "url": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&h=300&fit=crop", "caption": "River view" },
+        { "url": "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=400&h=300&fit=crop", "caption": "Living room" },
+        { "url": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&h=300&fit=crop", "caption": "Dock" }
       ],
       "videos": [],
       "virtualTours": [],
@@ -259,8 +259,8 @@
       },
       "description": "Waterfront gem on the Banana River with direct ocean access. Updated Key West-style home with vaulted ceilings, open living areas, and a spacious dock. Enjoy sunsets from the heated pool and watch rocket launches from your backyard.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Water view" },
-        { "url": "", "thumbUrl": "", "caption": "Interior" }
+        { "url": "https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=400&h=300&fit=crop", "caption": "Water view" },
+        { "url": "https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=400&h=300&fit=crop", "caption": "Interior" }
       ],
       "videos": [],
       "virtualTours": [],
@@ -296,8 +296,8 @@
       },
       "description": "Nearly new construction in a sought-after Melbourne community. Thoughtful layout with a downstairs owner's suite, upstairs bonus room, and modern finishes. Large fenced yard with room for a future pool. Top-rated schools nearby.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Front" },
-        { "url": "", "thumbUrl": "", "caption": "Kitchen" }
+        { "url": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&h=300&fit=crop", "caption": "Front" },
+        { "url": "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=400&h=300&fit=crop", "caption": "Kitchen" }
       ],
       "videos": [],
       "virtualTours": [],
@@ -333,8 +333,8 @@
       },
       "description": "Charming Satellite Beach home just three blocks from the ocean. Open concept with a bright, airy feel. Updated kitchen, luxury vinyl plank flooring, impact windows throughout. Walk to restaurants, shops, and the beach.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Exterior" },
-        { "url": "", "thumbUrl": "", "caption": "Living area" }
+        { "url": "https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=400&h=300&fit=crop", "caption": "Exterior" },
+        { "url": "https://images.unsplash.com/photo-1600566753376-12c8ab7c5a38?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600566753376-12c8ab7c5a38?w=400&h=300&fit=crop", "caption": "Living area" }
       ],
       "videos": [],
       "virtualTours": [],
@@ -370,9 +370,9 @@
       },
       "description": "Oceanfront masterpiece with direct beach access. Designed by a renowned coastal architect, this estate blends contemporary lines with warm finishes. Rooftop terrace with panoramic ocean views, elevator, wine cellar, and a private beach walkover.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Ocean view" },
-        { "url": "", "thumbUrl": "", "caption": "Great room" },
-        { "url": "", "thumbUrl": "", "caption": "Rooftop terrace" }
+        { "url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop", "caption": "Ocean view" },
+        { "url": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&h=300&fit=crop", "caption": "Great room" },
+        { "url": "https://images.unsplash.com/photo-1600566753104-685f4f24cb4d?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600566753104-685f4f24cb4d?w=400&h=300&fit=crop", "caption": "Rooftop terrace" }
       ],
       "videos": [],
       "virtualTours": [
@@ -410,8 +410,8 @@
       },
       "description": "Move-in ready in Viera East with A-rated schools. Open layout with tall ceilings, granite counters, stainless appliances, and a covered lanai overlooking a private, fenced yard. Community pool, playground, and walking trails.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Front" },
-        { "url": "", "thumbUrl": "", "caption": "Kitchen" }
+        { "url": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=300&fit=crop", "caption": "Front" },
+        { "url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=300&fit=crop", "caption": "Kitchen" }
       ],
       "videos": [],
       "virtualTours": [],
@@ -447,8 +447,8 @@
       },
       "description": "Like-new construction in Palm Bay's growing east side. Smart layout with an open great room, modern kitchen with island seating, and a covered patio. Tile roof, energy-efficient windows, and low HOA. Minutes to shopping and I-95.",
       "photos": [
-        { "url": "", "thumbUrl": "", "caption": "Exterior" },
-        { "url": "", "thumbUrl": "", "caption": "Interior" }
+        { "url": "https://images.unsplash.com/photo-1598228723793-52759bba239c?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1598228723793-52759bba239c?w=400&h=300&fit=crop", "caption": "Exterior" },
+        { "url": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=1200&h=800&fit=crop", "thumbUrl": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=400&h=300&fit=crop", "caption": "Interior" }
       ],
       "videos": [],
       "virtualTours": [],
